@@ -35,9 +35,32 @@ Write the detailed procedure here
 ## Program:
 /*
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: SUBASH CHANDRA BOSE R
+RegisterNumber:  22009106
 */
+```
+Half Subtractor:
+
+module half_sub(x, y, x1, d, b);
+input x, y;
+output x1, d, b;
+xor(d, x, y);
+not(x1, x);
+and(b, x1, y);
+endmodule
+Full Subtractor:
+
+module full_sub(x, y ,z, x1, x2, x3, x4, x5, d, b);
+input x, y, z;
+output x1, x2, x3, x4, x5, d, b;
+xor(x1, x, y);
+xor(d, x1, z);
+not(x2, x);
+and(x3, x2, y);
+and(x4, x2, z);
+and(x5, y, z);
+or(b, x3, x4, x5);
+endmodule
 
 ## Output:
 
@@ -46,6 +69,12 @@ RegisterNumber:
 
 
 ##  RTL realization
+
+Half Subtractor
+![image](https://user-images.githubusercontent.com/123537051/215268495-08cf72e7-035e-4296-bd85-0c4ee32012e7.png)
+
+Full Subtractor
+![image](https://user-images.githubusercontent.com/123537051/215268553-597e4e6b-ef91-439c-8409-c24d204d1845.png)
 
 
 ## Timing diagram 
