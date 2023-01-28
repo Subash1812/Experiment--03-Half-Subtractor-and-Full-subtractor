@@ -61,6 +61,7 @@ and(x4, x2, z);
 and(x5, y, z);
 or(b, x3, x4, x5);
 endmodule
+```
 
 ## Output:
 
